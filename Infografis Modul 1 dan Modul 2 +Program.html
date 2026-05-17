@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infografis Lengkap: Modul 1 & 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .algo-box {
+        border-left-width: 4px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .flow-box {
+        background: white;
+        border: 2px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .flow-arrow {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #94a3b8;
+        margin: 0.25rem 0;
+        font-weight: bold;
+      }
+      .table-container {
+        overflow-x: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        text-align: left;
+      }
+      th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+        padding: 0.75rem 1rem;
+        border-bottom: 2px solid #e2e8f0;
+        color: #334155;
+      }
+      td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: #475569;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      /* Custom scrollbar for code blocks */
+      pre::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+      }
+      pre::-webkit-scrollbar-track {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      pre::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="antialiased pb-20">
+    <!-- HEADER -->
+    <header
+      class="bg-gradient-to-r from-blue-800 to-teal-600 text-white py-16 px-6 shadow-xl mb-12"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h1
+          class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight"
+        >
+          Dokumen Visual Lengkap:<br />Algoritma Kesehatan Modul 1 & 2
+        </h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-4xl">
+          Teks utuh dari rumusan algoritma, penjabaran logika, visualisasi
+          skoring, tabel data pengujian, serta
+          <strong>Implementasi Program C++</strong>. Tanpa diringkas.
+        </p>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 space-y-16">
+      <!-- ========================================== -->
+      <!-- MODUL 1: TUGAS 1 - SKRINING AWAL             -->
+      <!-- ========================================== -->
+      <section
+        class="bg-white rounded-2xl shadow-lg p-6 lg:p-10 border-t-8 border-blue-600"
+      >
+        <div class="mb-8 border-b pb-4">
+          <span class="text-blue-600 font-bold tracking-wider text-sm uppercase"
+            >Modul 1 • Bagian A • Tugas 1</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">
+            Skrining Awal Pasien Demam
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+          <!-- Teks Algoritma Lengkap -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-slate-800">
+              1. Algoritma Skrining Awal (Teks Utuh)
+            </h3>
+            <div class="space-y-4 text-slate-700 leading-relaxed">
+              <p><strong>1. Mulai</strong> program.</p>
+
+              <div class="algo-box bg-slate-50 border-slate-400">
+                <p><strong>2. Input Data Pasien:</strong></p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>
+                    Nilai angka: Suhu tubuh (°C), Saturasi oksigen (%), Tekanan
+                    darah sistolik (mmHg), dan Trombosit (/mm³).
+                  </li>
+                  <li>
+                    Jawaban Ya/Tidak: Batuk, Sesak napas berat, Nyeri otot, Ruam
+                    merah, dan Muntah terus-menerus.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-red-50 border-red-500">
+                <p class="font-bold text-red-800 mb-2">
+                  3. Evaluasi 1: Penyakit Berat / Kondisi Kritis
+                </p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>
+                    <em>JIKA</em> Saturasi &lt; 90%
+                    <strong>ATAU</strong> Tekanan Darah &lt; 90 mmHg
+                    <strong>ATAU</strong> Muntah terus-menerus
+                    <strong>ATAU</strong> Sesak berat
+                    <strong>ATAU</strong> Trombosit sangat rendah
+                  </li>
+                  <li>
+                    <em>MAKA</em> Keputusan =
+                    <strong>RUJUK ke rumah sakit (Kondisi Kritis)</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-orange-50 border-orange-500">
+                <p class="font-bold text-orange-800 mb-2">
+                  4. Evaluasi 2: COVID-19 Sedang
+                  <span class="font-normal text-sm"
+                    >(Jika Evaluasi 1 tidak terpenuhi)</span
+                  >
+                </p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>
+                    <em>JIKA</em> Suhu demam <strong>DAN</strong> Batuk = Ya
+                    <strong>DAN</strong> Saturasi 90-94%
+                    <strong>DAN</strong> Sesak berat = Ya
+                  </li>
+                  <li>
+                    <em>MAKA</em> Keputusan =
+                    <strong>RUJUK ke rumah sakit (COVID-19 Sedang)</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-yellow-50 border-yellow-500">
+                <p class="font-bold text-yellow-800 mb-2">
+                  5. Evaluasi 3: Demam Berdarah / DBD
+                  <span class="font-normal text-sm"
+                    >(Jika Evaluasi 1 & 2 tidak terpenuhi)</span
+                  >
+                </p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>
+                    <em>JIKA</em> Suhu &gt; 39°C <strong>DAN</strong> Nyeri otot
+                    = Ya <strong>DAN</strong> Ruam = Ya
+                    <strong>DAN</strong> Trombosit &lt; 100.000
+                  </li>
+                  <li>
+                    <em>MAKA</em> Keputusan =
+                    <strong>RAWAT INAP (Monitoring cairan dan trombosit)</strong
+                    >.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-green-50 border-green-500">
+                <p class="font-bold text-green-800 mb-2">
+                  6. Evaluasi 4: Demam Biasa
+                  <span class="font-normal text-sm"
+                    >(Jika Evaluasi 1, 2, & 3 tidak terpenuhi)</span
+                  >
+                </p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>
+                    <em>JIKA</em> Suhu 37.5 - 38.5°C
+                    <strong>DAN</strong> Saturasi Normal
+                    <strong>DAN</strong> Sesak = Tidak
+                    <strong>DAN</strong> Trombosit Normal
+                  </li>
+                  <li>
+                    <em>MAKA</em> Keputusan =
+                    <strong>RAWAT JALAN (Istirahat dan obat simptomatik)</strong
+                    >.
+                  </li>
+                </ul>
+              </div>
+
+              <p>
+                <strong>7. Kondisi Lainnya:</strong> Jika tidak masuk ke
+                kategori di atas, Keputusan = <strong>OBSERVASI MEDIS</strong>.
+              </p>
+              <p><strong>8. Tampilkan Hasil Keputusan.</strong></p>
+              <p><strong>9. Selesai.</strong></p>
+            </div>
+          </div>
+
+          <!-- Flowchart Kanan -->
+          <div
+            class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200 h-fit"
+          >
+            <h3 class="text-2xl font-bold mb-6 text-slate-800 text-center">
+              2. Flowchart Skrining Awal
+            </h3>
+
+            <div class="flow-box bg-slate-800 text-white border-slate-800">
+              <span class="font-bold">[START]</span><br />Input: Suhu, Saturasi,
+              Trombosit, TD Sistolik, Batuk, Sesak, Nyeri Otot, Ruam, Muntah
+            </div>
+            <div class="flow-arrow">⬇</div>
+
+            <div class="flow-box border-red-500 text-sm md:text-base">
+              <span class="text-red-600 font-bold block mb-1">Cek Kritis:</span>
+              Saturasi &lt;90 OR TD &lt;90 OR Muntah OR Sesak Berat OR Trombosit
+              Sangat Rendah?
+            </div>
+            <div
+              class="flex justify-between w-full max-w-[600px] mx-auto text-sm px-4 mt-2 font-bold"
+            >
+              <span class="text-red-600"
+                >⬅ YA: Keputusan: RUJUK ke RS (Kondisi Kritis)</span
+              >
+              <span class="text-slate-500">TIDAK ⬇</span>
+            </div>
+
+            <div class="flow-box border-orange-500 mt-2 text-sm md:text-base">
+              <span class="text-orange-600 font-bold block mb-1"
+                >Cek COVID:</span
+              >
+              Demam AND Batuk AND Saturasi 90-94% AND Sesak?
+            </div>
+            <div
+              class="flex justify-between w-full max-w-[600px] mx-auto text-sm px-4 mt-2 font-bold"
+            >
+              <span class="text-orange-600"
+                >⬅ YA: Keputusan: RUJUK ke RS (COVID-19 Sedang)</span
+              >
+              <span class="text-slate-500">TIDAK ⬇</span>
+            </div>
+
+            <div class="flow-box border-yellow-500 mt-2 text-sm md:text-base">
+              <span class="text-yellow-600 font-bold block mb-1">Cek DBD:</span>
+              Suhu &gt;39 AND Nyeri Otot AND Ruam AND Trombosit &lt;100.000?
+            </div>
+            <div
+              class="flex justify-between w-full max-w-[600px] mx-auto text-sm px-4 mt-2 font-bold"
+            >
+              <span class="text-yellow-600"
+                >⬅ YA: Keputusan: RAWAT INAP (Demam Berdarah / DBD)</span
+              >
+              <span class="text-slate-500">TIDAK ⬇</span>
+            </div>
+
+            <div class="flow-box border-green-500 mt-2 text-sm md:text-base">
+              <span class="text-green-600 font-bold block mb-1"
+                >Cek Biasa:</span
+              >
+              Suhu 37.5-38.5 AND Saturasi Normal AND Tidak Sesak AND Trombosit
+              Normal?
+            </div>
+            <div
+              class="flex justify-between w-full max-w-[600px] mx-auto text-sm px-4 mt-2 font-bold"
+            >
+              <span class="text-green-600"
+                >⬅ YA: Keputusan: RAWAT JALAN (Demam Biasa)</span
+              >
+              <span class="text-slate-500">TIDAK ⬇</span>
+            </div>
+
+            <div class="flow-box bg-slate-200 mt-2 text-sm md:text-base">
+              Keputusan: Observasi Medis Lanjutan
+            </div>
+            <div class="flow-arrow">⬇</div>
+            <div class="flow-box bg-slate-800 text-white border-slate-800">
+              <span class="font-bold"
+                >Tampilkan Hasil Keputusan &amp; [END]</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            3. Tabel Data Uji (Tugas 1)
+          </h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Skenario</th>
+                  <th>Suhu (°C)</th>
+                  <th>Saturasi (%)</th>
+                  <th>TD Sistolik (mmHg)</th>
+                  <th>Trombosit</th>
+                  <th>Batuk</th>
+                  <th>Sesak Berat</th>
+                  <th>Nyeri Otot</th>
+                  <th>Ruam</th>
+                  <th>Muntah</th>
+                  <th class="bg-blue-600 text-white">
+                    Target Output (Keputusan)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Pasien 1</strong></td>
+                  <td>38.0</td>
+                  <td><strong>85</strong></td>
+                  <td>100</td>
+                  <td>150.000</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td class="font-bold text-red-600 bg-red-50">
+                    Kondisi Kritis (Rujuk)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien 2</strong></td>
+                  <td><strong>38.0</strong></td>
+                  <td><strong>92</strong></td>
+                  <td>110</td>
+                  <td>150.000</td>
+                  <td><strong>Ya</strong></td>
+                  <td><strong>Ya</strong></td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td class="font-bold text-orange-600 bg-orange-50">
+                    COVID-19 Sedang (Rujuk)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien 3</strong></td>
+                  <td><strong>39.5</strong></td>
+                  <td>98</td>
+                  <td>110</td>
+                  <td><strong>80.000</strong></td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td><strong>Ya</strong></td>
+                  <td><strong>Ya</strong></td>
+                  <td>Tidak</td>
+                  <td class="font-bold text-yellow-600 bg-yellow-50">
+                    Demam Berdarah / DBD (Rawat Inap)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien 4</strong></td>
+                  <td><strong>38.0</strong></td>
+                  <td><strong>98</strong></td>
+                  <td>120</td>
+                  <td><strong>200.000</strong></td>
+                  <td>Tidak</td>
+                  <td><strong>Tidak</strong></td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td>Tidak</td>
+                  <td class="font-bold text-green-600 bg-green-50">
+                    Demam Biasa (Rawat Jalan)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Program C++ Tugas 1 -->
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            4. Implementasi Program C++ (Tugas 1)
+          </h3>
+          <div
+            class="bg-[#0f172a] rounded-xl p-4 md:p-6 overflow-x-auto shadow-inner border border-slate-700 relative"
+          >
+            <pre><code class="text-emerald-400 font-mono text-sm md:text-base leading-relaxed whitespace-pre">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    float suhu;
+    int saturasi, trombosit, td_sistolik;
+    char batuk, sesak_berat, nyeri_otot, ruam, muntah;
+
+    cout &lt;&lt; "=== Sistem Skrining Demam Puskesmas ===\n";
+    cout &lt;&lt; "Suhu Tubuh (C): "; cin &gt;&gt; suhu;
+    cout &lt;&lt; "Saturasi Oksigen (%): "; cin &gt;&gt; saturasi;
+    cout &lt;&lt; "Tekanan Darah Sistolik (mmHg): "; cin &gt;&gt; td_sistolik;
+    cout &lt;&lt; "Trombosit (/mm3): "; cin &gt;&gt; trombosit;
+    
+    cout &lt;&lt; "\nJawab dengan 'y' (ya) atau 'n' (tidak):\n";
+    cout &lt;&lt; "Apakah pasien batuk? "; cin &gt;&gt; batuk;
+    cout &lt;&lt; "Apakah pasien sesak napas berat? "; cin &gt;&gt; sesak_berat;
+    cout &lt;&lt; "Apakah pasien nyeri otot? "; cin &gt;&gt; nyeri_otot;
+    cout &lt;&lt; "Apakah pasien ada ruam merah? "; cin &gt;&gt; ruam;
+    cout &lt;&lt; "Apakah pasien muntah terus-menerus? "; cin &gt;&gt; muntah;
+
+    cout &lt;&lt; "\n&gt;&gt;&gt; KEPUTUSAN: ";
+    
+    // Evaluasi 1: Penyakit Berat / Kritis
+    if (saturasi &lt; 90 || td_sistolik &lt; 90 || muntah == 'y' || sesak_berat == 'y' || trombosit &lt;= 50000) {
+        cout &lt;&lt; "RUJUK ke rumah sakit (Kondisi Kritis)\n";
+    } 
+    // Evaluasi 2: COVID-19 Sedang
+    else if (suhu &gt; 37.5 &amp;&amp; batuk == 'y' &amp;&amp; saturasi &gt;= 90 &amp;&amp; saturasi &lt;= 94 &amp;&amp; sesak_berat == 'y') {
+        cout &lt;&lt; "RUJUK ke rumah sakit (COVID-19 Sedang)\n";
+    } 
+    // Evaluasi 3: Demam Berdarah (DBD)
+    else if (suhu &gt; 39.0 &amp;&amp; nyeri_otot == 'y' &amp;&amp; ruam == 'y' &amp;&amp; trombosit &lt; 100000) {
+        cout &lt;&lt; "RAWAT INAP (Monitoring cairan dan trombosit)\n";
+    } 
+    // Evaluasi 4: Demam Biasa
+    else if (suhu &gt;= 37.5 &amp;&amp; suhu &lt;= 38.5 &amp;&amp; saturasi &gt;= 95 &amp;&amp; sesak_berat == 'n' &amp;&amp; trombosit &gt;= 100000) {
+        cout &lt;&lt; "RAWAT JALAN (Istirahat dan obat simptomatik)\n";
+    } 
+    // Evaluasi 5: Kondisi Lainnya
+    else {
+        cout &lt;&lt; "OBSERVASI MEDIS LANJUTAN\n";
+    }
+
+    return 0;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- MODUL 1: TUGAS 2 - CDSS & PERBURUKAN       -->
+      <!-- ========================================== -->
+      <section
+        class="bg-white rounded-2xl shadow-lg p-6 lg:p-10 border-t-8 border-indigo-600"
+      >
+        <div class="mb-8 border-b pb-4">
+          <span
+            class="text-indigo-600 font-bold tracking-wider text-sm uppercase"
+            >Modul 1 • Bagian B • Tugas 2</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">
+            Prediksi Perburukan & CDSS
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 mb-12">
+          <!-- Teks Algoritma Lengkap -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-slate-800">
+              1. Algoritma CDSS dan Prediksi Perburukan
+            </h3>
+            <div class="space-y-4 text-slate-700 leading-relaxed">
+              <p><strong>1. Mulai</strong> program.</p>
+              <p>
+                <strong>2. Inisialisasi Variabel:</strong> Set nilai
+                <code>total_skor = 0</code>.
+              </p>
+              <p>
+                <strong>3. Input Data:</strong> Baca parameter Suhu, Saturasi,
+                Tekanan Darah Sistolik, Nadi, Laju Napas, Trombosit, Sesak,
+                Muntah, Batuk, Nyeri, dan Ruam.
+              </p>
+
+              <div class="algo-box bg-slate-50 border-indigo-400">
+                <p><strong>4. Tahap 1: Identifikasi Penyakit Awal</strong></p>
+                <p class="ml-4 mt-1">
+                  Lakukan skrining awal (Demam Biasa, COVID, DBD, Kritis) sesuai
+                  algoritma Tugas 1. Simpan status ini.
+                </p>
+              </div>
+
+              <div class="algo-box bg-slate-50 border-indigo-600">
+                <p>
+                  <strong
+                    >5. Tahap 2: Penilaian Risiko Perburukan (Perhitungan
+                    Skor)</strong
+                  ><br />
+                  <span class="text-sm font-normal text-slate-500"
+                    >(Sistem akan mengecek parameter satu per satu dan
+                    menjumlahkan skornya secara kumulatif)</span
+                  >
+                </p>
+                <ul class="list-disc pl-6 mt-2 space-y-2">
+                  <li>
+                    <em>JIKA</em> Suhu &gt; 39.0°C, <em>MAKA</em>
+                    <code>total_skor = total_skor + 1</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Saturasi &lt; 90%, <em>MAKA</em>
+                    <code>total_skor = total_skor + 4</code>.
+                    <em>SEBALIKNYA JIKA</em> Saturasi 90 - 94%, <em>MAKA</em>
+                    <code>total_skor = total_skor + 2</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Tekanan Darah &lt; 90 mmHg, <em>MAKA</em>
+                    <code>total_skor = total_skor + 3</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Nadi &gt; 130 bpm, <em>MAKA</em>
+                    <code>total_skor = total_skor + 2</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Laju Napas &gt; 30x/menit, <em>MAKA</em>
+                    <code>total_skor = total_skor + 2</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Trombosit &lt; 50.000, <em>MAKA</em>
+                    <code>total_skor = total_skor + 4</code>.
+                    <em>SEBALIKNYA JIKA</em> Trombosit &lt; 100.000,
+                    <em>MAKA</em> <code>total_skor = total_skor + 2</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Sesak napas = Ya, <em>MAKA</em>
+                    <code>total_skor = total_skor + 2</code>.
+                  </li>
+                  <li>
+                    <em>JIKA</em> Muntah terus = Ya, <em>MAKA</em>
+                    <code>total_skor = total_skor + 1</code>.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-slate-50 border-indigo-800">
+                <p>
+                  <strong
+                    >6. Tahap 3: Interpretasi dan Rekomendasi Penanganan</strong
+                  >
+                </p>
+                <ul class="list-disc pl-6 mt-2 space-y-2">
+                  <li>
+                    <em>JIKA</em> <code>total_skor</code> &gt; 8,
+                    <em>MAKA</em> Status = <strong>Sangat Kritis</strong>.
+                    Rekomendasi: Rujukan ICU, Oksigen, Cairan infus.
+                  </li>
+                  <li>
+                    <em>JIKA</em> <code>total_skor</code> 6 - 8,
+                    <em>MAKA</em> Status = <strong>Risiko Tinggi</strong>.
+                    Rekomendasi: Observasi ketat, Pemeriksaan laboratorium.
+                  </li>
+                  <li>
+                    <em>JIKA</em> <code>total_skor</code> 3 - 5,
+                    <em>MAKA</em> Status = <strong>Risiko Sedang</strong>.
+                    Rekomendasi: Lakukan observasi.
+                  </li>
+                  <li>
+                    <em>JIKA</em> <code>total_skor</code> 0 - 2,
+                    <em>MAKA</em> Status = <strong>Stabil</strong>. Rekomendasi:
+                    Rawat jalan.
+                  </li>
+                </ul>
+              </div>
+
+              <p>
+                <strong>7. Tampilkan</strong> Hasil Tahap 1, Tahap 2, dan Tahap
+                3.
+              </p>
+              <p><strong>8. Selesai.</strong></p>
+            </div>
+          </div>
+
+          <!-- Grafik Skor -->
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-slate-800">
+              Visualisasi Bobot Penilaian Skor (Tahap 2)
+            </h3>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+              Grafik di bawah ini mengurutkan parameter berdasarkan tingkat
+              bahayanya. Parameter dengan bobot tinggi
+              <span class="font-bold text-red-600">(+4)</span> dan
+              <span class="font-bold text-orange-600">(+3)</span> merupakan
+              indikator kritis utama yang dapat mengancam jiwa pasien.
+            </p>
+            <div
+              class="bg-white border border-slate-200 rounded-xl p-6 shadow-md h-[450px] relative w-full"
+            >
+              <canvas id="scoringChart"></canvas>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4 mt-12 text-slate-800">
+              2. Flowchart Tahap 2 & 3
+            </h3>
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <div
+                class="flow-box bg-slate-800 text-white border-slate-800 text-sm"
+              >
+                [START] ➔ Input Semua Parameter ➔ Set total_skor = 0<br />
+                Tahap 1: Lakukan Identifikasi Awal
+              </div>
+              <div class="flow-arrow">⬇</div>
+              <div class="flow-box border-indigo-400 text-sm">
+                <strong>Tahap 2 (Skoring):</strong><br />
+                Cek Suhu &gt; 39°C? ➔ (Ya: total_skor + 1)<br />
+                Cek Saturasi &lt; 90%? ➔ (Ya: total_skor + 4)<br />
+                Cek Saturasi 90-94%? ➔ (Ya: total_skor + 2)<br />
+                Cek TD &lt; 90 mmHg? ➔ (Ya: total_skor + 3)<br />
+                ... Lanjutkan Cek Berurutan: Nadi, Napas, Trombosit, Sesak,
+                Muntah ...
+              </div>
+              <div class="flow-arrow">⬇</div>
+              <div class="flow-box border-indigo-600 text-sm">
+                <strong>Tahap 3 (Evaluasi Akhir):</strong><br />
+                Total Skor &gt; 8? ➔
+                <strong>Sangat Kritis (ICU, O2, Cairan)</strong><br />
+                Total Skor 6-8? ➔
+                <strong>Risiko Tinggi (Observasi Ketat, Lab)</strong><br />
+                Total Skor 3-5? ➔ <strong>Risiko Sedang (Observasi)</strong
+                ><br />
+                Selain itu ➔ <strong>Stabil (Rawat Jalan)</strong>
+              </div>
+              <div class="flow-arrow">⬇</div>
+              <div
+                class="flow-box bg-slate-800 text-white border-slate-800 text-sm"
+              >
+                Tampilkan Identifikasi Awal, Total Skor, dan Rekomendasi ➔ [END]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            3. Tabel Data Uji (Tugas 2)
+          </h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Skenario</th>
+                  <th>Suhu</th>
+                  <th>Saturasi</th>
+                  <th>TD</th>
+                  <th>Nadi</th>
+                  <th>Napas</th>
+                  <th>Trombosit</th>
+                  <th>Sesak</th>
+                  <th>Muntah</th>
+                  <th class="bg-indigo-600 text-white text-center">
+                    Total Skor
+                  </th>
+                  <th class="bg-indigo-800 text-white">
+                    Status Akhir (Output)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Pasien A</strong></td>
+                  <td>40.0 <code>(+1)</code></td>
+                  <td>85 <code>(+4)</code></td>
+                  <td>80 <code>(+3)</code></td>
+                  <td>140 <code>(+2)</code></td>
+                  <td>35 <code>(+2)</code></td>
+                  <td>40.000 <code>(+4)</code></td>
+                  <td>Ya <code>(+2)</code></td>
+                  <td>Ya <code>(+1)</code></td>
+                  <td class="font-extrabold text-xl text-center text-red-600">
+                    19
+                  </td>
+                  <td class="font-bold text-red-600 bg-red-50">
+                    Sangat Kritis
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien B</strong></td>
+                  <td>37.5 <code>(0)</code></td>
+                  <td>92 <code>(+2)</code></td>
+                  <td>110 <code>(0)</code></td>
+                  <td>90 <code>(0)</code></td>
+                  <td>20 <code>(0)</code></td>
+                  <td>80.000 <code>(+2)</code></td>
+                  <td>Ya <code>(+2)</code></td>
+                  <td>Tidak <code>(0)</code></td>
+                  <td
+                    class="font-extrabold text-xl text-center text-orange-600"
+                  >
+                    6
+                  </td>
+                  <td class="font-bold text-orange-600 bg-orange-50">
+                    Risiko Tinggi
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien C</strong></td>
+                  <td>39.5 <code>(+1)</code></td>
+                  <td>98 <code>(0)</code></td>
+                  <td>120 <code>(0)</code></td>
+                  <td>100 <code>(0)</code></td>
+                  <td>20 <code>(0)</code></td>
+                  <td>150.000 <code>(0)</code></td>
+                  <td>Ya <code>(+2)</code></td>
+                  <td>Tidak <code>(0)</code></td>
+                  <td
+                    class="font-extrabold text-xl text-center text-yellow-600"
+                  >
+                    3
+                  </td>
+                  <td class="font-bold text-yellow-600 bg-yellow-50">
+                    Risiko Sedang
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Pasien D</strong></td>
+                  <td>36.5 <code>(0)</code></td>
+                  <td>98 <code>(0)</code></td>
+                  <td>120 <code>(0)</code></td>
+                  <td>80 <code>(0)</code></td>
+                  <td>18 <code>(0)</code></td>
+                  <td>250.000 <code>(0)</code></td>
+                  <td>Tidak <code>(0)</code></td>
+                  <td>Tidak <code>(0)</code></td>
+                  <td class="font-extrabold text-xl text-center text-green-600">
+                    0
+                  </td>
+                  <td class="font-bold text-green-600 bg-green-50">Stabil</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Program C++ Tugas 2 -->
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            4. Implementasi Program C++ (Tugas 2)
+          </h3>
+          <div
+            class="bg-[#0f172a] rounded-xl p-4 md:p-6 overflow-x-auto shadow-inner border border-slate-700 relative"
+          >
+            <pre><code class="text-emerald-400 font-mono text-sm md:text-base leading-relaxed whitespace-pre">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    float suhu;
+    int saturasi, td, nadi, napas, trombosit, total_skor = 0;
+    char sesak, muntah;
+
+    cout &lt;&lt; "=== CDSS &amp; Prediksi Perburukan Pasien ===\n";
+    cout &lt;&lt; "Suhu Tubuh (C): "; cin &gt;&gt; suhu;
+    cout &lt;&lt; "Saturasi Oksigen (%): "; cin &gt;&gt; saturasi;
+    cout &lt;&lt; "Tekanan Darah Sistolik (mmHg): "; cin &gt;&gt; td;
+    cout &lt;&lt; "Denyut Jantung (bpm): "; cin &gt;&gt; nadi;
+    cout &lt;&lt; "Laju Napas (x/menit): "; cin &gt;&gt; napas;
+    cout &lt;&lt; "Trombosit (/mm3): "; cin &gt;&gt; trombosit;
+    
+    cout &lt;&lt; "\nJawab dengan 'y' (ya) atau 'n' (tidak):\n";
+    cout &lt;&lt; "Sesak napas berat? "; cin &gt;&gt; sesak;
+    cout &lt;&lt; "Muntah terus-menerus? "; cin &gt;&gt; muntah;
+
+    // Tahap 2: Penilaian Risiko Perburukan (Skoring Kumulatif)
+    if (suhu &gt; 39.0) total_skor += 1;
+    
+    if (saturasi &lt; 90) total_skor += 4;
+    else if (saturasi &gt;= 90 &amp;&amp; saturasi &lt;= 94) total_skor += 2;
+    
+    if (td &lt; 90) total_skor += 3;
+    if (nadi &gt; 130) total_skor += 2;
+    if (napas &gt; 30) total_skor += 2;
+    
+    if (trombosit &lt; 50000) total_skor += 4;
+    else if (trombosit &lt; 100000) total_skor += 2;
+    
+    if (sesak == 'y') total_skor += 2;
+    if (muntah == 'y') total_skor += 1;
+
+    // Tahap 3: Interpretasi &amp; Rekomendasi Akhir
+    cout &lt;&lt; "\n&gt;&gt;&gt; Total Skor Risiko : " &lt;&lt; total_skor &lt;&lt; "\n";
+    cout &lt;&lt; "&gt;&gt;&gt; Status Akhir      : ";
+    
+    if (total_skor &gt; 8) {
+        cout &lt;&lt; "SANGAT KRITIS\n    Rekomendasi: Rujukan ICU, Oksigen, Cairan infus\n";
+    } else if (total_skor &gt;= 6 &amp;&amp; total_skor &lt;= 8) {
+        cout &lt;&lt; "RISIKO TINGGI\n    Rekomendasi: Observasi ketat, Pemeriksaan laboratorium\n";
+    } else if (total_skor &gt;= 3 &amp;&amp; total_skor &lt;= 5) {
+        cout &lt;&lt; "RISIKO SEDANG\n    Rekomendasi: Lakukan observasi\n";
+    } else {
+        cout &lt;&lt; "STABIL\n    Rekomendasi: Rawat jalan\n";
+    }
+
+    return 0;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- MODUL 2: MONITORING ICU REAL-TIME          -->
+      <!-- ========================================== -->
+      <section
+        class="bg-white rounded-2xl shadow-lg p-6 lg:p-10 border-t-8 border-teal-600"
+      >
+        <div class="mb-8 border-b pb-4">
+          <span class="text-teal-600 font-bold tracking-wider text-sm uppercase"
+            >Modul 2</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">
+            Sistem Monitoring ICU Sederhana (Real-Time)
+          </h2>
+          <p class="text-slate-600 mt-2 italic">
+            Karena konsep dasar di Tugas 1 dan Tugas 2 Modul 2 ini saling
+            melengkapi, algoritma di bawah adalah versi gabungan/pengembangan
+            yang komprehensif untuk sistem pemantauan kontinu.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 mb-12">
+          <!-- Teks Algoritma Lengkap -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-slate-800">
+              1. Algoritma Monitoring ICU Real-Time
+            </h3>
+            <div class="space-y-4 text-slate-700 leading-relaxed">
+              <p>
+                <strong>1. Inisialisasi Sistem:</strong> Siapkan variabel Suhu,
+                SpO2, Sistolik, Diastolik, BPM. Siapkan output LED dan Alarm.
+              </p>
+              <p>
+                <strong>2. Mulai Perulangan Utama (Looping Real-Time)</strong>
+              </p>
+              <p>
+                <strong>3. Baca Sensor:</strong> Ambil data terbaru secara
+                <em>real-time</em>.
+              </p>
+
+              <div class="algo-box bg-slate-50 border-teal-400">
+                <p><strong>4. Evaluasi Suhu Tubuh:</strong></p>
+                <ul class="list-disc pl-6 mt-1 space-y-1">
+                  <li>Jika 36 - 37.5°C = NORMAL.</li>
+                  <li>Jika 37.6 - 38.5°C = WARNING.</li>
+                  <li>Jika &gt; 38.5°C ATAU &lt; 35°C = KRITIS.</li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-slate-50 border-teal-400">
+                <p><strong>5. Evaluasi SpO2:</strong></p>
+                <ul class="list-disc pl-6 mt-1 space-y-1">
+                  <li>Jika &ge; 95% = NORMAL.</li>
+                  <li>Jika 90 - 94% = WARNING.</li>
+                  <li>Jika &lt; 90% = KRITIS.</li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-slate-50 border-teal-400">
+                <p>
+                  <strong
+                    >6. Evaluasi Tekanan Darah (Sistolik & Diastolik):</strong
+                  >
+                </p>
+                <ul class="list-disc pl-6 mt-1 space-y-1">
+                  <li>
+                    Sistolik: NORMAL (90-120), WARNING (121-140), KRITIS
+                    (&gt;140 atau &lt;80).
+                  </li>
+                  <li>
+                    Diastolik: NORMAL (60-80), WARNING (81-90), KRITIS (&gt;90
+                    atau &lt;50).
+                  </li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-slate-50 border-teal-400">
+                <p><strong>7. Evaluasi Detak Jantung (BPM):</strong></p>
+                <ul class="list-disc pl-6 mt-1 space-y-1">
+                  <li>Jika 60 - 100 bpm = NORMAL.</li>
+                  <li>Jika 101 - 120 bpm = WARNING.</li>
+                  <li>Jika &gt; 120 bpm ATAU &lt; 50 bpm = KRITIS.</li>
+                </ul>
+              </div>
+
+              <div class="algo-box bg-teal-50 border-teal-600">
+                <p><strong>8. Penentuan Status Keseluruhan:</strong></p>
+                <ul class="list-disc pl-6 mt-1 space-y-2">
+                  <li>
+                    Jika ada <em>minimal satu</em> KRITIS ➔ Status Akhir =
+                    <strong>KRITIS</strong>. Nyalakan Alarm dan LED Merah.
+                  </li>
+                  <li>
+                    Jika tidak ada KRITIS, tapi ada
+                    <em>minimal satu</em> WARNING ➔ Status Akhir =
+                    <strong>WARNING</strong>. Nyalakan LED Kuning.
+                  </li>
+                  <li>
+                    Jika semua NORMAL ➔ Status Akhir = <strong>NORMAL</strong>.
+                    Nyalakan LED Hijau.
+                  </li>
+                </ul>
+              </div>
+
+              <p><strong>9. Tampilkan</strong> data ke monitor.</p>
+              <p>
+                <strong>10. Jeda Waktu</strong> (Delay 1 detik), lalu kembali ke
+                langkah nomor 3.
+              </p>
+            </div>
+          </div>
+
+          <!-- Flowchart -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-slate-800">
+              2. Flowchart ICU Real-Time
+            </h3>
+            <div
+              class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200 h-fit text-sm md:text-base"
+            >
+              <div class="flow-box bg-slate-800 text-white border-slate-800">
+                [START] ➔ Inisialisasi Hardware &amp; Variabel
+              </div>
+              <div class="flow-arrow">⬇</div>
+
+              <div class="flow-box bg-teal-100 border-teal-600 font-bold">
+                Mulai Loop Real-Time
+              </div>
+              <div class="flow-arrow">⬇</div>
+
+              <div class="flow-box border-teal-400">
+                Baca Data Sensor: Suhu, SpO2, Sistolik, Diastolik, BPM<br />
+                ➔ Evaluasi Suhu Tubuh<br />
+                ➔ Evaluasi SpO2<br />
+                ➔ Evaluasi Tekanan Darah<br />
+                ➔ Evaluasi BPM
+              </div>
+              <div class="flow-arrow">⬇</div>
+
+              <div class="flow-box border-slate-400 font-bold">
+                Apakah ada parameter KRITIS?
+              </div>
+              <div
+                class="flex justify-between w-full max-w-[600px] mx-auto px-4 mt-2 mb-2 font-bold"
+              >
+                <span class="text-red-600"
+                  >⬅ YA: Status = KRITIS (LED Merah &amp; Alarm)</span
+                >
+                <span class="text-slate-500">TIDAK ⬇</span>
+              </div>
+
+              <div class="flow-box border-slate-400 font-bold">
+                Apakah ada parameter WARNING?
+              </div>
+              <div
+                class="flex justify-between w-full max-w-[600px] mx-auto px-4 mt-2 font-bold"
+              >
+                <span class="text-orange-600"
+                  >⬅ YA: Status = WARNING (LED Kuning)</span
+                >
+                <span class="text-green-600"
+                  >TIDAK: Status = NORMAL (LED Hijau) ⬇</span
+                >
+              </div>
+
+              <div class="flow-box bg-teal-100 border-teal-600 mt-4">
+                Tampilkan Data ke Monitor<br />
+                Delay / Jeda 1 Detik
+              </div>
+              <div class="text-center text-teal-600 font-bold my-2 text-xl">
+                ⟲ Kembali membaca sensor (Loop)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            3. Tabel Data Uji (ICU Real-Time)
+          </h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Skenario</th>
+                  <th>Suhu</th>
+                  <th>SpO2</th>
+                  <th>Sistolik</th>
+                  <th>Diastolik</th>
+                  <th>BPM</th>
+                  <th>Evaluasi Sistem Parameter</th>
+                  <th class="bg-teal-600 text-white">
+                    Status Akhir Keseluruhan
+                  </th>
+                  <th class="bg-slate-800 text-white">Indikator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Pengecekan 1</strong></td>
+                  <td>37.0</td>
+                  <td>98</td>
+                  <td>110</td>
+                  <td>70</td>
+                  <td>80</td>
+                  <td>Semua parameter di rentang Normal.</td>
+                  <td class="font-bold text-green-600 bg-green-50">NORMAL</td>
+                  <td class="font-bold">LED Hijau</td>
+                </tr>
+                <tr>
+                  <td><strong>Pengecekan 2</strong></td>
+                  <td><strong>38.0</strong></td>
+                  <td>96</td>
+                  <td>115</td>
+                  <td>75</td>
+                  <td>85</td>
+                  <td>Suhu bergeser ke rentang Warning.</td>
+                  <td class="font-bold text-orange-600 bg-orange-50">
+                    WARNING
+                  </td>
+                  <td class="font-bold">LED Kuning</td>
+                </tr>
+                <tr>
+                  <td><strong>Pengecekan 3</strong></td>
+                  <td>37.0</td>
+                  <td>97</td>
+                  <td>115</td>
+                  <td>75</td>
+                  <td><strong>125</strong></td>
+                  <td>Detak jantung naik drastis (Kritis).</td>
+                  <td class="font-bold text-red-600 bg-red-50">KRITIS</td>
+                  <td class="font-bold text-red-600">LED Merah + Alarm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Program C++ Modul 2 -->
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold mb-4 text-slate-800">
+            4. Implementasi Program C++ (ICU Real-Time)
+          </h3>
+          <div
+            class="bg-[#0f172a] rounded-xl p-4 md:p-6 overflow-x-auto shadow-inner border border-slate-700 relative"
+          >
+            <pre><code class="text-emerald-400 font-mono text-sm md:text-base leading-relaxed whitespace-pre">#include &lt;iostream&gt;
+#include &lt;thread&gt;   // Digunakan untuk fungsi delay (jeda waktu)
+#include &lt;chrono&gt;   // Digunakan bersama thread untuk menghitung detik
+#include &lt;cstdlib&gt;  // Digunakan untuk fungsi rand() angka acak simulasi sensor
+using namespace std;
+
+int main() {
+    float suhu = 37.0;
+    int spo2 = 98, sistolik = 110, diastolik = 70, bpm = 80;
+
+    cout &lt;&lt; "=== Sistem Monitoring ICU Real-Time ===\n";
+
+    // Infinite loop: perulangan terus menerus untuk pemantauan Real-Time
+    while (true) {
+        // --- 1. Simulasi fluktuasi bacaan sensor ---
+        suhu += (rand() % 5 - 2) / 10.0;
+        spo2 += (rand() % 5 - 2); 
+        if(spo2 &gt; 100) spo2 = 100; // Batas wajar
+        sistolik += (rand() % 11 - 5);
+        diastolik += (rand() % 7 - 3);
+        bpm += (rand() % 11 - 5);
+
+        bool isKritis = false;
+        bool isWarning = false;
+
+        // --- 2. Evaluasi Ambang Batas Kriteria ---
+        if (suhu &gt; 38.5 || suhu &lt; 35.0) isKritis = true;
+        else if (suhu &gt;= 37.6 &amp;&amp; suhu &lt;= 38.5) isWarning = true;
+
+        if (spo2 &lt; 90) isKritis = true;
+        else if (spo2 &gt;= 90 &amp;&amp; spo2 &lt;= 94) isWarning = true;
+
+        if (sistolik &gt; 140 || sistolik &lt; 80) isKritis = true;
+        else if (sistolik &gt;= 121 &amp;&amp; sistolik &lt;= 140) isWarning = true;
+
+        if (diastolik &gt; 90 || diastolik &lt; 50) isKritis = true;
+        else if (diastolik &gt;= 81 &amp;&amp; diastolik &lt;= 90) isWarning = true;
+
+        if (bpm &gt; 120 || bpm &lt; 50) isKritis = true;
+        else if (bpm &gt;= 101 &amp;&amp; bpm &lt;= 120) isWarning = true;
+
+        // --- 3. Output Layar &amp; Status Hardware ---
+        cout &lt;&lt; "------------------------------------------------\n";
+        cout &lt;&lt; "Suhu: " &lt;&lt; suhu &lt;&lt; "C | SpO2: " &lt;&lt; spo2 &lt;&lt; "% | Sis: " &lt;&lt; sistolik 
+             &lt;&lt; " | Dia: " &lt;&lt; diastolik &lt;&lt; " | BPM: " &lt;&lt; bpm &lt;&lt; "\n";
+        
+        cout &lt;&lt; "&gt;&gt;&gt; STATUS: ";
+        if (isKritis) {
+            cout &lt;&lt; "KRITIS (TINDAKAN SEGERA!)\n";
+            cout &lt;&lt; "[HARDWARE]: LED MERAH ON | ALARM BEEP BEEP!\n";
+        } else if (isWarning) {
+            cout &lt;&lt; "WARNING (PANTAU KETAT)\n";
+            cout &lt;&lt; "[HARDWARE]: LED KUNING ON | ALARM OFF\n";
+        } else {
+            cout &lt;&lt; "NORMAL (STABIL)\n";
+            cout &lt;&lt; "[HARDWARE]: LED HIJAU ON  | ALARM OFF\n";
+        }
+
+        // --- 4. Jeda Waktu ---
+        // Delay 2 detik agar fluktuasi bisa terbaca (Simulasi Real-Time interval)
+        this_thread::sleep_for(chrono::seconds(2));
+    }
+
+    // Program tidak akan pernah sampai ke sini karena perulangan while(true)
+    return 0; 
+}</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Wrapping Text Label Function untuk Chart.js Tooltip
+      function wrapLabel(label, maxChars = 16) {
+        if (label.length <= maxChars) return label;
+        const words = label.split(" ");
+        const lines = [];
+        let currentLine = "";
+        words.forEach((word) => {
+          if ((currentLine + word).length > maxChars) {
+            if (currentLine) lines.push(currentLine.trim());
+            currentLine = word + " ";
+          } else {
+            currentLine += word + " ";
+          }
+        });
+        if (currentLine) lines.push(currentLine.trim());
+        return lines;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("scoringChart").getContext("2d");
+
+        // Labels berdasarkan Modul 1 Tugas 2
+        const rawLabels = [
+          "Saturasi < 90%",
+          "Trombosit < 50.000",
+          "Tekanan Darah < 90 mmHg",
+          "Saturasi 90-94%",
+          "Denyut Jantung > 130 bpm",
+          "Laju Napas > 30 x/menit",
+          "Trombosit < 100.000",
+          "Sesak Napas = Ya",
+          "Suhu > 39°C",
+          "Muntah Terus = Ya",
+        ];
+        const wrappedLabels = rawLabels.map((l) => wrapLabel(l));
+
+        const dataPoints = [4, 4, 3, 2, 2, 2, 2, 2, 1, 1];
+
+        // Pewarnaan chart
+        const bgColors = dataPoints.map((val) => {
+          if (val === 4) return "rgba(239, 68, 68, 0.8)"; // Merah
+          if (val === 3) return "rgba(249, 115, 22, 0.8)"; // Oranye
+          if (val === 2) return "rgba(234, 179, 8, 0.8)"; // Kuning
+          return "rgba(56, 189, 248, 0.8)"; // Biru Muda
+        });
+
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: wrappedLabels,
+            datasets: [
+              {
+                label: "Penambahan Skor Risiko",
+                data: dataPoints,
+                backgroundColor: bgColors,
+                borderRadius: 6,
+                borderWidth: 1,
+                borderColor: "rgba(0,0,0,0.05)",
+                maxBarThickness: 32,
+              },
+            ],
+          },
+          options: {
+            indexAxis: "y", // Bar Horizontal
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  title: function (tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                      return label.join(" ");
+                    } else {
+                      return label;
+                    }
+                  },
+                  label: function (context) {
+                    return ` Poin Bobot: +${context.raw}`;
+                  },
+                },
+              },
+            },
+            scales: {
+              x: {
+                beginAtZero: true,
+                max: 5,
+                grid: {
+                  color: "#e2e8f0",
+                  borderDash: [5, 5],
+                },
+                ticks: {
+                  stepSize: 1,
+                  callback: function (value) {
+                    return "+" + value; // Menambahkan prefix '+' pada sumbu X
+                  },
+                  font: { weight: "bold" },
+                },
+                title: {
+                  display: true,
+                  text: "Nilai Penambahan Skor",
+                  color: "#64748b",
+                  font: { weight: "bold", size: 13 },
+                },
+              },
+              y: {
+                grid: {
+                  display: false, // Menghilangkan garis horizontal untuk tampilan lebih bersih
+                },
+                ticks: {
+                  font: { size: 12, weight: "600" },
+                  color: "#334155",
+                },
+              },
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
